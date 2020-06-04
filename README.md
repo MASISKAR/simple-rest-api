@@ -48,7 +48,7 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
 ## Making requests
 #### Create a task
-request url `localhost:3001/tasks`
+request url `http://localhost:3001/tasks`
 
 request method `POST`
 
@@ -61,7 +61,7 @@ date: `{String}`
  
  
 #### Get tasks
-request url `localhost:3001/tasks`
+request url `http://localhost:3001/tasks`
 
 request method `GET`
 
@@ -84,11 +84,11 @@ request method `GET`
 
 
 #### Get the task
-request url `localhost:3001/tasks/:taskId`
+request url `http://localhost:3001/tasks/:taskId`
 request method `GET`
 
 #### Update the task
-request url `localhost:3001/tasks/:taskId`
+request url `http://localhost:3001/tasks/:taskId`
 request method `PUT`
 request body 
 `{`
@@ -98,5 +98,5 @@ date: `{String}`
 `}`         
     
 #### Delete the task
-request url `localhost:3001/tasks/:taskId`
+request url `http://localhost:3001/tasks/:taskId`
 request method `DELETE`
