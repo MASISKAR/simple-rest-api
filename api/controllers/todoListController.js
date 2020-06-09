@@ -132,7 +132,7 @@ class TodoListController {
                 if (taskIndex === -1) res.status(404).send({error: "The task not found"});
                 tasks.splice(taskIndex, 1);
                 fs.writeFileSync(dataPath, JSON.stringify(tasks), 'utf8');
-                res.json({suddess: true});
+                res.json({success: true});
             }
             else {
                 return res.status(404).send({error: "The task not found"});
