@@ -54,7 +54,7 @@ request method `POST`
 
 request body 
 `{`
-title: `{String}`,
+title: `{String}`, (required)
 description: `{String}`,
 date: `{String}`
 `}`  
@@ -100,3 +100,15 @@ date: `{String}`
 #### Delete the task
 request url `http://localhost:3001/tasks/:taskId`
 request method `DELETE`
+
+#### Sending contact form
+request url `http://localhost:3001/contact`
+
+request method `POST`
+
+request body 
+`{`
+name: `{String}`, (required)
+email: `{String}`, (required)
+message: `{String}`
+`}`  

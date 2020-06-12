@@ -8,8 +8,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const routes = require('./api/routes/todoListRoutes');
-routes(app);
+const todoRoutes = require('./api/routes/todoListRoutes'),
+         contactFormRoutes = require('./api/routes/contactFormRoutes');
+todoRoutes(app);
+contactFormRoutes(app);
 
 app.use((req, res)=> {
     res.status(404).send({url: req.originalUrl + ' not found'});
