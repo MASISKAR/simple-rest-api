@@ -10,4 +10,7 @@ module.exports = function(app) {
     .get(todoList.getTask)
     .put(todoList.updateTask)
     .delete(todoList.deleteTask);
+    
+    app.route('/tasks')
+    .delete(todoList.deleteTasks);
 };

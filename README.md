@@ -101,6 +101,14 @@ date: `{String}`
 request url `http://localhost:3001/tasks/:taskId`
 request method `DELETE`
 
+#### Delete tasks bulk
+request url `http://localhost:3001/tasks`
+request method `DELETE`
+request body 
+`{`
+tasks: `{Array[String{task id}]}`,
+`}`  
+
 #### Sending contact form
 request url `http://localhost:3001/contact`
 
