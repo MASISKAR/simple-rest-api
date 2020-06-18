@@ -148,14 +148,14 @@ class TodoListController {
                 const rawdata = fs.readFileSync(dataPath);
                 const tasks = JSON.parse(rawdata);
                 if(!req.body.tasks){
-                    res.status(411).send({error: "The tasks field is required"});
+                   return res.status(411).send({error: "The tasks field is required"});
                 }
                 if(!Array.isArray(req.body.tasks)){
-                    res.status(411).send({error: "The field tasks should be an array"});
+                   return res.status(411).send({error: "The field tasks should be an array"});
                 }
                 req.body.tasks.forEach(id => {
                     const taskIndex = tasks.findIndex(task => task.id === id);
-                    if (taskIndex === -1) res.status(404).send({error: "The task not found"});
+                    if (taskIndex === -1) return res.status(404).send({error: "The task not found"});
                     tasks.splice(taskIndex, 1);
                 });
                 fs.writeFileSync(dataPath, JSON.stringify(tasks), 'utf8');
